@@ -1,14 +1,19 @@
+import { notFound } from "next/navigation";
+
 export default async function Review({
   params,
 }: {
   params: Promise<{ productId: string; reviewId: string }>;
 }) {
-  const product = (await params).productId;
-  const review = (await params).reviewId;
+  const { productId, reviewId } = await params;
+
+  if (parseInt(reviewId) > 1000) {
+    notFound();
+  }
 
   return (
     <h1>
-      Review {review} for product {product}!
+      Review {reviewId} for product {productId}!
     </h1>
   );
 }
