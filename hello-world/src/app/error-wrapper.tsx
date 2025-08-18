@@ -16,13 +16,14 @@ const ErrorSimulator = ({
   if (error) throw new Error(message);
 
   return (
-    <button
-      title="Simulate an error"
-      className="bg-red-950 text-red-500 rounded p-1 leading-none font-semibold text-sm"
-      onClick={() => setError(true)}
-    >
-      Simulate Error
-    </button>
+    // <button
+    //   title="Simulate an error"
+    //   className="bg-red-950 text-red-500 rounded p-1 leading-none font-semibold text-sm"
+    //   onClick={() => setError(true)}
+    // >
+    //   Simulate Error
+    // </button>
+    <></>
   );
 };
 
